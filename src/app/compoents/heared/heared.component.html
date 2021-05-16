@@ -1,11 +1,16 @@
-<mat-toolbar color="primary">
-  <h1>My App</h1>
-  <div>
-    <button mat-button [matMenuTriggerFor]="menu">
-      <mat-icon>format_color_fill</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item *ngFor="let theme of themes" (click)="switchTheme.emit(theme)">{{ theme }}</button>
-    </mat-menu>
-  </div>
-</mat-toolbar>
+<header>
+  <mat-toolbar color="primary">
+    <div>
+      <span class="logo"></span>
+      <h1>My App</h1>
+    </div>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>format_color_fill</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let theme of themes" (click)="switchTheme.emit(theme)">{{ theme }}</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</header>

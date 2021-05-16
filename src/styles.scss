@@ -4,6 +4,7 @@
 
 @use './themes/light-theme.definition.scss' as light;
 @use './themes/dark-grey-theme.definition.scss' as dark;
+@use './themes/green-theme.definition.scss' as green-theme;
 
 html,
 body {
@@ -12,12 +13,34 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
+  .logo {
+    width: 32px;
+    background-image: url("assets/cellphone-basic.svg");
+    background-size: cover;
+  }
+}
 
 @include mat.all-component-themes(light.$light-theme);
 
 .grey-dark-theme {
-  background: mat.get-color-from-palette(mat.$grey-palette, 700);
+  background: dark.$dark-background;
   @include mat.all-component-themes(dark.$dark-theme);
+
+  .logo {
+    width: 32px;
+    background: url("assets/file-document.svg");
+    background-size: cover;
+  }
+}
+
+.green-theme {
+  background: green-theme.$green-background;
+  @include mat.all-component-themes(green-theme.$green-theme);
+
+  .logo {
+    width: 32px;
+    background: url("assets/home-floor-a.svg");
+    background-size: cover;
+  }
 }

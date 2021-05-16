@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
       case AppTheme.Dark:
         this.theme = 'grey-dark-theme';
         break;
+      case AppTheme.Green:
+        this.theme = 'green-theme';
+        break;
       default:
         this.theme = '';
         break;
