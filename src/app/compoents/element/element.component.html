@@ -1,0 +1,18 @@
+<mat-card class="mat-elevation-z5">
+  <mat-card-header>
+    <img mat-card-avatar [src]="element.header.imageUrl" alt="Header photo" />
+    <mat-card-title>{{ element.header.title }}</mat-card-title>
+    <mat-card-subtitle>{{ element.header.subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="element.imageUrl" alt="Description photo" />
+  <mat-card-content>
+    <p>
+      {{ element.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary">LIKE</button>
+    <button mat-button color="accent">SHARE</button>
+    <button mat-button color="warn">REMOVE</button>
+  </mat-card-actions>
+</mat-card>

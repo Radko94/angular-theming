@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use '~@angular/material' as mat;
+
+@use './themes/light-theme.definition.scss' as light;
+@use './themes/dark-grey-theme.definition.scss' as dark;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+@include mat.all-component-themes(light.$light-theme);
+
+.grey-dark-theme {
+  background: mat.get-color-from-palette(mat.$grey-palette, 700);
+  @include mat.all-component-themes(dark.$dark-theme);
+}

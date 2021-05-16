@@ -1,0 +1,13 @@
+:host {
+  section {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    app-element {
+      flex-basis: 40%;
+      margin: 20px;
+    }
+  }
+}
